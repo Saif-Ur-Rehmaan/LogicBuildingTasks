@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>abcdefg</h1>
+    <script>
+        let str = "[[[[]]]]"
+        let ar = str.split("");
+        let isv = false;
+        let responces = [];
+        let allPossibleCombo = [
+            ['[]',"[]"],
+            ["{}","{}"],
+            ['()','()'],
+            ['((','))'],
+            ['{{',"}}"],
+            ['[[',"]]"]
+        ]
+        if (ar.length % 2 == 0) {
+            for (let iA = 0; iA < ar.length; iA += 4) {
+                const e = ar[iA];
+                const a = ar[iA+1];
+                const e1 = ar[iA+2];
+                const a1= ar[iA+3];
+                console.log(iA,e+a,e1+a1);
+
+                // allPossibleCombo.forEach(combo => {
+                //     let comboKey=combo[0];
+                //     let Comboval=combo[1];
+
+                //     let comparision1=(e+ar[ar.indexOf(e)]==comboKey);
+                //     let comparision2=(e2+ar[ar.indexOf(e2)]==Comboval);
+                    
+                //     console.log(e,e2,comparision1,comparision1
+                //         )
+                    
+                //     if ( comparision1&&comparision2) {
+                //         console.log(true);         
+                //     } 
+                // });
+            }
+
+        } else {
+            responces.push(false);
+        }
+        // console.log(responces);
+
+
+
+
+        // let str = "[][][]";
+        // let ar = str.split("");
+        // let isv = false;
+        // let allPossibleCombo=['[]','{}','()','()','((','{{','[[']
+        // if (ar.length % 2 == 0) {
+        //     ar.forEach((e, i) => {
+        //         allPossibleCombo.forEach(combo => {
+        //             if (e+ar[ar.indexOf(e)+1]==combo) {
+        //                 console.log(true);         
+        //             }
+        //         });
+                
+        //     });
+
+        // }else{
+        //     console.log(false);
+        // }
+
+
+
+
+
+
+
+
+
+
+        // console.log("hhhh");
+        // let strArr = ("[[]]").split("");
+        // let isvalidstring = 2;
+
+        // function Check_Single_Closing(fst, Snd) {
+        //     console.log(fst, Snd);
+        //     switch (fst) {
+        //         case "[":
+        //             return (Snd == "]") ? 1 : 2;
+        //             break;
+        //         case "{":
+        //             return (Snd == "}") ? 1 : 2;
+        //             break;
+        //         case "(":
+        //             return (Snd == ")") ? 1 : 2;
+        //             break;
+
+        //         default:
+        //             return 3;
+        //             break;
+        //     }
+        // }
+        // function Check_double_Closing(fst, Snd) {
+        //     console.log(fst, Snd);
+        //     switch (fst) {
+        //         case "[[":
+        //             return (Snd == "]]") ? 1 : 2;
+        //             break;
+        //         case "{{":
+        //             return (Snd == "}}") ? 1 : 2;
+        //             break;
+        //         case "((":
+        //             return (Snd == "))") ? 1 : 2;
+        //             break;
+
+        //         default:
+        //             return 3;
+        //             break;
+        //     }
+        // }
+
+        // if (strArr.length % 2 == 0) {
+        //     let responce, responce2;
+        //     let combos = ['[[', '{{', '((',];
+
+        //     strArr.forEach((char, index) => {
+        //         let isnested = false;
+        //         combos.forEach(e => {
+        //             let combinedfstAndsnd = char + strArr[index + 1];
+        //             // console.log(e, combinedfstAndsnd);
+        //             if (e == combinedfstAndsnd) {
+        //                 isnested = true;
+        //             }
+        //         })
+
+        //         if (!isnested) {
+        //             console.log("not nes");
+        //             if ((index == 0 || index % 2 == 0)) {
+        //                 responce = Check_Single_Closing(strArr[index], strArr[index + 1]);
+        //             } else {
+        //                 responce = Check_Single_Closing(strArr[index + 1], strArr[index + 2]);
+        //             }
+        //         } else {
+        //             console.log("nes");
+        //             responce = Check_double_Closing(strArr[index + 1], strArr[index + 2]);
+        //         }
+
+
+        //         console.log(`\nres : ${responce}`);
+        //     });
+
+        //     isvalidstring = responce;
+        // } else {
+        //     isvalidstring = 2;
+        // }
+        // console.log(`isvalid : ${isvalidstring}`);
+
+
+
+    </script>
+
+</body>
+
+</html>
